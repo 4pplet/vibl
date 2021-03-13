@@ -3,3 +3,4 @@ build
 .vscode
 *.o
 vibl-flash
+.DS_Store
