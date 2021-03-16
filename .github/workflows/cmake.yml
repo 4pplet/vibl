@@ -44,3 +44,9 @@ jobs:
       # shell: bash
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: make
+      
+    - name: Archive
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-files
+        path: ${{github.workspace}}/bootloader/build
