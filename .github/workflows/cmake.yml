@@ -35,5 +35,8 @@ jobs:
     - name: Build
       working-directory: ${{github.workspace}}/bootloader/build
       shell: bash
+    - uses: fiam/arm-none-eabi-gcc@v1
+      with:
+        release: '9-2019-q4' # The arm-none-eabi-gcc release to use.
       # Execute the build.  You can specify a specific target with "--target <NAME>"
-      run: make
+    - run: make
