@@ -44,7 +44,13 @@ jobs:
       # shell: bash
       # Execute the build.  You can specify a specific target with "--target <NAME>"
       run: make
-      
+    
+    - name: Partly clean
+      working-directory: ${{github.workspace}}/bootloader/build
+      # shell: bash
+      # Execute the build.  You can specify a specific target with "--target <NAME>"
+      run: cd ${{github.workspace}}/bootloader/build/ && rm -r CMakeFiles && CMakeCache.txt && Makefile && cmake_install.cmake
+    
     - name: Archive
       uses: actions/upload-artifact@v2
       with:
