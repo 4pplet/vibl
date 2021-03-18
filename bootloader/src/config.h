@@ -22,11 +22,11 @@
 #define BL_INPUT_PIN 13
 #elif defined(TARGET_BOOTLEG_REV_B)
 #define VIAL_KEYBOARD_UID {0x71, 0xDD, 0x6F, 0x80, 0x44, 0xE7, 0x94, 0x58}
-/* setup for bootleg, CAPS */
+/* setup for bootleg, ESC */
 #define BL_OUTPUT_BANK GPIOC
 #define BL_OUTPUT_PIN 4
-#define BL_INPUT_BANK GPIOB
-#define BL_INPUT_PIN 13
+#define BL_INPUT_BANK GPIOA
+#define BL_INPUT_PIN 7
 #else
 #error Unknown target
 #endif
